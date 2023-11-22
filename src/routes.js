@@ -1,6 +1,7 @@
 const { Router } = require('express');
 
 const productsController = require('./controllers/product-controller');
+const saleController = require('./controllers/sale-controller');
 
 const router = Router();
 
@@ -9,6 +10,7 @@ const router = Router();
  */
 
 // Get Buscar
+router.get('/sale', saleController.index);
 router.get('/products', productsController.index);
 router.get('/product/:id', productsController.findById);
 // Post Criar
